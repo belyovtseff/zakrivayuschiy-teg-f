@@ -45,7 +45,7 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
-  font-family: 'PressStart2P';
+  font-family: 'PressStart2P', fantasy;
   text-align: center;
   font-size: clamp(14px, calc(14px + (23 - 14) * ((100vw - 375px) / (1440 - 375))), 23px);
   font-weight: 400;
@@ -96,6 +96,7 @@
   font-size: 14px;
   text-shadow: 0 0 1px var(--background-color, #fff);
   opacity: .5;
+  z-index: 2;
 }
 
 @supports (
@@ -139,7 +140,6 @@
 .card__buttons {
   display: flex;
   justify-content: end;
-  gap: 12px;
 }
 
 .card__like-button {
@@ -160,6 +160,7 @@
   overflow: hidden;
   position: relative;
   transition: box-shadow .3 ease;
+  max-height: 38px;
 }
 
 .card__icon-button {
@@ -169,7 +170,7 @@
 }
 
 .card__footer {
-  padding: 31px 23px 21px 23px;
+  padding: 28px 23px 17px 23px;
   display: flex;
   flex-direction: column;
   gap: 25px;
@@ -222,12 +223,18 @@
 
 .button__text {
   transition: color .5s ease-in-out;
+  mix-blend-mode: luminosity;
+}
+
+.footer__button {
+  max-height: 55px;
 }
 
 
 .standard-button:hover .button__text {
   z-index: 2;
-  color: var(--background-color, #fff)
+  color: var(--background-color, #fff);
+  
 }
 
 .standard-button:hover::before {
@@ -288,7 +295,7 @@
   transition: fill 0.3s 0.06s linear;
 }
 
-.like-icon.is-liked .main-body {
+.like-icon.is-liked {
   transform-origin: center;
   animation: heart-scaling 0.3s 0.1s ease-in alternate;
 }
@@ -349,6 +356,7 @@ dialog::backdrop {
   display: flex;
   flex-direction: column;
   gap: 30px;
+  max-inline-size: 293px;
   color: var(--main-color, #000);
 }
 
@@ -369,8 +377,8 @@ dialog::backdrop {
   gap: 10px;
   width: 100%;
   min-height: 38px;
-  padding: 9px 17px;
   cursor: pointer;
+  border: none;
 }
 
 
@@ -379,10 +387,6 @@ dialog::backdrop {
     width: 100%;
     min-width: 320px;
     padding: 100px 0;
-  }
-
-  .footer__button {
-    flex-direction: column;
   }
 
   .footer__button svg {
@@ -410,4 +414,13 @@ dialog::backdrop {
   .standard-button:active {
     scale: 1.1;
   }
+
+  .footer__button {
+    min-height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 15px 20.5px;
+  };
 }
