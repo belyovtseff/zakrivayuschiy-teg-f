@@ -28,6 +28,7 @@ li {
 
 a {
   color: inherit;
+  text-decoration: none;
 }
 
 button,
@@ -35,6 +36,7 @@ input {
   color: currentColor;
   font-family: inherit;
   font-size: inherit;
+  background-color: transparent;
 }
 
 ul,
