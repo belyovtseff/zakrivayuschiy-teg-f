@@ -306,10 +306,11 @@
             height="21"
             viewBox="0 0 21 21"
             class="floppy__footer"
+            
           >
-            <use href="./svg/floppy.svg#floppy"></use>
+            <use href="./svg/floppy.svg#floppy" width="42" height="42" ></use>
           </svg>
-          <p class="button__text">Сохранить на&nbsp;память</p>
+          <span class="button__text">Сохранить на&nbsp;память</span>
         </button>
         </div>
       </div>
@@ -322,17 +323,18 @@
               height="39"
               viewBox="0 0 39 39"
             >
-              <use href="./svg/floppy.svg#floppy"></use>
+              <use href="./svg/floppy.svg#floppy" width="78" height="78"></use>
             </svg>
-            <span>Вставьте дискету, чтобы продолжить</span>
+            <p>Вставьте дискету, чтобы продолжить</p>
           </div>
           <form method="dialog">
             <button
               type="button"
-              class="button dialog__button"
+              class="button dialog__button standard-button"
               onclick="window['dialog-save'].close()"
             >
-              <p class=" standard-button"><span class="button__text">OK</span></p>
+              <span class="button__text">OK</span>
+              <!-- Я не могу поменять span на p, потому что тогда W3C ругается -->
             </button>
           </form>
         </div>
