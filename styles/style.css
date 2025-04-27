@@ -130,7 +130,7 @@
 
 .card__text {
   font-weight: var(--text-fw, 400);
-  line-height: 1.2;
+  line-height: 21px;
   color: currentColor;
   font-size: inherit;
 }
@@ -138,7 +138,7 @@
 .card__buttons {
   display: flex;
   justify-content: end;
-  gap: 12px;
+  gap: 4px;
 }
 
 .card__like-button {
@@ -174,7 +174,7 @@
 }
 
 .card__footer {
-  padding: 28px 23px 17px 23px;
+  padding: 28px 23px 26px 23px;
   display: flex;
   flex-direction: column;
   gap: 25px;
@@ -356,8 +356,9 @@ dialog::backdrop {
 .dialog {
   width: calc(100vw * (375 / 1440));
   min-width: 341px;
+  max-width: 357px;
   border: 2px solid var(--main-color, #000);
-  padding: 30px;
+  padding: 30px 28px;
   background: var(--background-color, #fff);
 }
 
@@ -397,6 +398,22 @@ dialog::backdrop {
     width: 100%;
     min-width: 320px;
     padding: 100px 0;
+  }
+
+  .card__title {
+    padding: 7px 10px;
+  }
+
+  .card__footer {
+    padding: 22px 27px 24px 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+  .card__image-text {
+    top: 21px;
+    right: 11px;
   }
 
   .footer__button svg {
